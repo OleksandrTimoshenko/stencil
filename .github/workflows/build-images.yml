@@ -11,4 +11,4 @@ jobs:
       - run: make build-nginx
         env:
           PAT: "${{ secrets.CI_TOKEN }}" 
-          USER: OleksandrTimoshenko
+          GITHUB_USER: OleksandrTimoshenko
