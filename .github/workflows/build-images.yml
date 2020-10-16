@@ -1,0 +1,14 @@
+on:
+  pull_request:
+
+jobs:
+  build-nginx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: touch .env
+      - run: make build-nginx
+        env:
+          PAT: "${{ secrets.ci_token }}" 
+          USER: OleksandrTimoshenko
